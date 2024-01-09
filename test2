@@ -1,0 +1,4 @@
+systeminfo
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" #Get only that information
+wmic qfe get Caption,Description,HotFixID,InstalledOn #Patches
+wmic os get osarchitecture || echo %PROCESSOR_ARCHITECTURE% #Get system architecture
